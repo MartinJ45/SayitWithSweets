@@ -1,0 +1,425 @@
+:root {
+    --borderPurple: rgb(117, 58, 117);
+    --darkPink: rgb(207, 180, 207);
+    --lightPink: rgb(230, 199, 230);
+    --offWhite: rgb(255, 247, 255);
+    --brown: rgb(173, 106, 108);
+    --cream: rgb(232, 214, 203);
+}
+* {
+    font-family: sans-serif;
+    color: var(--brown);
+    /* border: solid black 1px; */
+}
+
+body {
+    background-color: var(--offWhite);
+    margin: auto;
+}
+
+h1, h2 {
+    font-family: "Oswald";
+}
+h2 {
+    text-align: center;
+}
+
+header, footer {
+    display: block;
+    margin: auto;
+}
+#topbar{
+    background-color: var(--lightPink);
+}
+#navbar{
+    background-color: var(--darkPink);
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    border-top-color: var(--borderPurple);
+    border-bottom-color: var(--borderPurple);
+    position: relative;
+}
+#navbar a, #navbar p {
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#navlist {
+    display: flex;
+    flex-wrap: wrap;
+}
+#navlist a:hover, #contact:hover, #options:hover {
+    background-color: var(--cream);
+    cursor: pointer;
+}
+#navlist p {
+    margin: 0%;
+}
+#navlist input {
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 40%;
+    width: 200px;
+}
+#contact, #options {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+    position: relative;
+    z-index: 1;
+}
+.contact_button, .options_button {
+    background-color: inherit;
+    border: none;
+    font-size: larger;
+    font-weight: bolder;
+}
+.contact_dropdown, .options_dropdown {
+    display: none;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    left: 0;
+}
+.contact_dropdown a, .options_dropdown a {
+    display: block;
+    float: left;
+    background-color: var(--darkPink);
+    border-style: solid;
+    border-top-style: none;
+    border-width: 1px;
+    border-color: var(--borderPurple);
+    width: 120%;
+}
+.show {
+    display: block;
+}
+
+#search {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.logo, #slideshow img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#slideshowlink {
+    text-decoration: none;
+}
+#social {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    text-decoration: none;
+}
+#social a {
+    text-decoration: none;
+    border: none;
+}
+.social {
+    margin-right: 20px;
+}
+#slideshow {
+    background-color: lightgray;
+    height: 20vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#slideshow img {
+    width: 50vw;
+}
+#gradient {
+    background-image: linear-gradient(to top, #00000090, #00000000);
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+}
+#slideshowinfo {
+    position: absolute;
+    width: 100%;
+    margin-bottom: 10px;
+    left: 0;
+    bottom: 0;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+#gradient h1 {
+    color: white;
+    font-weight: normal;
+    margin: 0%;
+}
+#dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.dot {
+    cursor: pointer;
+    justify-content: center;
+    display: inline-block;
+    background-color: lightgrey;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.active {
+    background-color: white;
+    height: 10px;
+    width: 10px;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#main a {
+    text-decoration: none;
+}
+#main h2 {
+    margin-top: 0%;
+    font-weight: bold;
+}
+#title, #slidename, #resultstitle {
+    text-align: center;
+}
+#main div {
+    background-color: white;
+    margin: auto;
+    margin-bottom: 5vw;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--borderPurple);
+    height: 18vw;
+    width: 20vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main img {
+    margin: auto;
+    height: 16vw;
+    width: 20vw;
+}
+
+#orderbody {
+    overflow: auto;
+    margin: 5vw;
+}
+#orderimg {
+    float: left;
+    margin-left: 5vw;
+}
+.orderimg {
+    background-color: white;
+    margin: auto;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--borderPurple);
+    height: 26vw;
+    width: 30vw;
+}
+#orderinfo {
+    float: right;
+}
+#orderbody h1, #aboutleft h1{
+    margin: 0;
+}
+#productheader, #aboutheader, #resultsheader {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+#productcost {
+    float: left;
+}
+#productdescription {
+    width: 50vw;
+}
+.customcupcakedesign {
+    display: none;
+}
+.show {
+    display: block;
+}
+.customcupcakedesign textarea {
+    resize: none;
+    margin-bottom: 5px;
+}
+
+#orderbody button {
+    border-style: none;
+    background-color: inherit;
+    border-radius: inherit;
+    display: inline-block;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#orderbody select {
+    background-color: var(--lightPink);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--borderPurple);
+    padding: 8px;
+    margin: 2px;
+    width: 12vw;
+}
+#orderbody select:hover {
+    cursor: pointer;
+}
+#orderbody button:hover {
+    background-color: var(--cream);
+    cursor: pointer;
+}
+#addbutton, #orderbutton {
+    background-color: var(--lightPink);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--borderPurple);
+    margin-top: 1vw;
+}
+#addbutton p {
+    display: inline-block;
+    font-weight: lighter;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#addbutton {
+    float: left;
+    margin-right: 2vw;
+}
+#order table tr th {
+    margin: 100px;
+}
+
+#mapcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#map{
+    width: 50vw;
+}
+#map iframe {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+#information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#infotable {
+    text-align: left;
+}
+#infotable th {
+    padding: 5px;
+    padding-right: 5vw;
+    vertical-align: top;
+}
+.closed {
+    background-color: lightcoral;
+}
+.open {
+    background-color: lightgreen;
+}
+
+#mainabout, #maincontact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#aboutleft {
+    margin-top: 6vw;
+}
+#aboutdescription {
+    width: 40vw;
+    font-size: 25px;
+}
+#cupcakevideo {
+    width: 35vw;
+    margin: 2vw;
+    border-color: var(--borderPurple);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+#contactform {
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#customtextarea {
+    resize: none;
+}
+#customordermain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#accordion {
+    width: 50vw;
+}
+
+#bottomlist {
+    text-decoration: none;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#bottomlist a {
+    margin: 10px;
+}
+#footerdiv {
+    background-color: var(--lightPink);
+}
+footer p {
+    margin: 0%;
+    padding-top: 10px;
+}
+footer {
+    margin-top: 4vw;
+    text-align: center;
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}

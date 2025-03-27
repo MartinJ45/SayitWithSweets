@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script defer src="../static/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Say it with Sweets">
+    <meta name="keywords" content="Bakery">
+    <meta name="description" content="MSay it with Sweets website">
+    <title>Say it with Sweets</title>
+</head>
+<body>
+    <header>
+        <div id="topbar">
+            <img class="logo" src="../static/logo.png" alt="Say it with Sweets" width="100px">
+            <div id="social">
+                <a href="https://www.instagram.com/sayitwithsweets11/" target="_blank">
+                    <img class="social" src="../static/instagramicon.png" alt="instagram icon" width="40px">
+                </a>
+                <a href="https://www.facebook.com/say.it.with.sweets/photos" target="_blank">
+                    <img class="social" src="../static/facebookicon.png" alt="facebook icon" width="40px">
+                </a>
+            </div>
+        </div>
+        <div id="navbar">
+            <nav id="navlist">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <div id ="contact" onmouseover="show_dropdown('contact_dropdown')" onmouseout="hide_dropdown('contact_dropdown')">
+                    <button class="contact_button">Contact Us</button>
+                    <div id="contact_dropdown" class="contact_dropdown">
+                        <a href="locations.html">Locations</a>
+                        <a href="contact.html">Hear From Us</a>
+                    </div>
+                </div>
+                <div id="options" onmouseover="show_dropdown('options_dropdown')" onmouseout="hide_dropdown('options_dropdown')">
+                    <button class="options_button">Our Options</button>
+                    <div id="options_dropdown" class="options_dropdown">
+                        <a href="cupcakes.html">Cupcakes</a>
+                        <a href="cakes.html">Cakes</a>
+                        <a href="cookies.html">Cookies</a>
+                        <a href="customcakeorder.html">Custom Orders</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <h1 id="title">Our Location</h1>
+    <div id="mainlocations">
+        <div id="mapcontainer">
+            <div id="map">
+                <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1307%20Pleasant%20Valley%20Blvd+(Say%20It%20With%20Sweets)
+                &amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+        </div>
+        <div id="information">
+            <table id="infotable">
+                <tr>
+                    <th>Address</th>
+                    <th>1307 Pleasant Valley Blvd. Altoona PA 16602 US</th>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <th>814-937-1564</th>
+                </tr>
+                <tr>
+                    <th>Hours</th>
+                    <th>
+                        <table>
+                            <tr id="0" class="day">
+                                <th>Sunday</th>
+                                <th>Closed</th>
+                            </tr>
+                            <tr id="1" class="day">
+                                <th>Monday</th>
+                                <th>10 AM - 5 PM</th>
+                            </tr>
+                            <tr id="2" class="day">
+                                <th>Tuesday</th>
+                                <th>10 AM - 4:30 PM</th>
+                            </tr>
+                            <tr id="3" class="day">
+                                <th>Wednesday</th>
+                                <th>10 AM - 4:30 PM</th>
+                            </tr>
+                            <tr id="4" class="day">
+                                <th>Thursday</th>
+                                <th>10 AM - 4:30 PM</th>
+                            </tr>
+                            <tr id="5" class="day">
+                                <th>Friday</th>
+                                <th>10 AM - 4:30 PM</th>
+                            </tr>
+                            <tr id="6" class="day">
+                                <th>Saturday</th>
+                                <th>10 AM - 12 PM</th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <footer>
+        <div id="footerdiv">
+            <p>Say It With Sweets | 814-937-1564</p>
+            <nav id="bottomlist">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="locations.html">Contact Us</a>
+                <a href="contact.html">Join Our Mailing List</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

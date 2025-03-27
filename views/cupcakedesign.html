@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script defer src="../static/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Say it with Sweets">
+    <meta name="keywords" content="Bakery">
+    <meta name="description" content="MSay it with Sweets website">
+    <title>Say it with Sweets</title>
+</head>
+<body>
+    <header>
+        <div id="topbar">
+            <img class="logo" src="../static/logo.png" alt="Say it with Sweets" width="100px">
+            <div id="social">
+                <a href="https://www.instagram.com/sayitwithsweets11/" target="_blank">
+                    <img class="social" src="../static/instagramicon.png" alt="instagram icon" width="40px">
+                </a>
+                <a href="https://www.facebook.com/say.it.with.sweets/photos" target="_blank">
+                    <img class="social" src="../static/facebookicon.png" alt="facebook icon" width="40px">
+                </a>
+            </div>
+        </div>
+        <div id="navbar">
+            <nav id="navlist">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <div id ="contact" onmouseover="show_dropdown('contact_dropdown')" onmouseout="hide_dropdown('contact_dropdown')">
+                    <button class="contact_button">Contact Us</button>
+                    <div id="contact_dropdown" class="contact_dropdown">
+                        <a href="locations.html">Locations</a>
+                        <a href="contact.html">Hear From Us</a>
+                    </div>
+                </div>
+                <div id="options" onmouseover="show_dropdown('options_dropdown')" onmouseout="hide_dropdown('options_dropdown')">
+                    <button class="options_button">Our Options</button>
+                    <div id="options_dropdown" class="options_dropdown">
+                        <a href="cupcakes.html">Cupcakes</a>
+                        <a href="cakes.html">Cakes</a>
+                        <a href="cookies.html">Cookies</a>
+                        <a href="customcakeorder.html">Custom Orders</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="orderbody">
+        <div id="orderimg">
+            <img id="productimg" class="orderimg" src="../static/cupcakedesign_unicorn.jpg">
+        </div>
+        <div id="orderinfo">
+            <div id="productheader">
+                <table>
+                    <tr>
+                        <th><h1 id="productname">Cupcake Design</h1></th>
+                        <th><h1>|</h1></th>
+                        <th><h1 id="productcost">$2.00+ each</h1></th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <p id="productdescription"> Bring your standard cupcakes to life with a touch from our artists. Our design cupcakes 
+                    come in vanilla and chocolate and are topped with a buttercream swirl as well as an edible design of your chosing. 
+                    Pricing is based off of which design is chosen.</p>
+            </div>
+            <form>
+                <div id="colorselect">
+                    <select class="select" required onchange="showcupcakedesign(this.value)">
+                        <option value="">Select design*:</option>
+                        <option value="cow">Cow</option>
+                        <option value="cowboy">Cowboy</option>
+                        <option value="dog">Dog</option>
+                        <option value="flower">Flower</option>
+                        <option value="gamer">Gamer</option>
+                        <option value="llama">Llama</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="minion">Minion</option>
+                        <option value="minnie">Minnie</option>
+                        <option value="ocean">Ocean</option>
+                        <option value="pawprint">Pawprint</option>
+                        <option value="sesamestreet">Seasame Street</option>
+                        <option value="shell">Shell</option>
+                        <option value="superhero">Superhero</option>
+                        <option value="unicorn">Unicorn</option>
+                        <option value="other">Custom</option>
+                    </select>
+                </div>
+                <div id="customcupcakedesign" class="customcupcakedesign">
+                    <p>Please provide a detailed description of the design*:</p>
+                    <textarea id="customtextarea" rows="5" cols="30" required></textarea>
+                </div>
+                <div id="batterselect">
+                    <select class="select" required>
+                        <option value="">Select batter*:</option>
+                        <option value="1">Vanilla</option>
+                        <option value="2">Chocolate</option>
+                    </select>
+                </div>
+            </form>
+            <table>
+                <tr>
+                    <th>
+                        <div id="addbutton">
+                            <button class="subtract" onclick="decreasenum()"><p>-</p></button>
+                            <p id="itemnum">1</p>
+                            <button class="add" onclick="increasenum()"><p>+</p></button>
+                        </div>
+                    </th>
+                    <th>
+                        <div id="orderbutton">
+                            <button onclick="validateitem()"><p>Add to order</p></button>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <footer>
+        <div id="footerdiv">
+            <p>Say It With Sweets | 814-937-1564</p>
+            <nav id="bottomlist">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="locations.html">Contact Us</a>
+                <a href="contact.html">Join Our Mailing List</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
